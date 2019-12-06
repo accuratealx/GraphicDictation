@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Count="5" Active="Release Linux32">
+      <Item1 Name="Release">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="..\Bin\GD-$(TargetCPU)"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <OtherUnitFiles Value="..\Units;..\Units\SimpleTools;MainFrm;SizeFrm;SettingsFrm;AboutFrm"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <StripSymbols Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item1>
+      <Item2 Name="Release Win64">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="..\Bin\GD x64"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <OtherUnitFiles Value="..\Units;..\Units\SimpleTools;MainFrm;SizeFrm;SettingsFrm;AboutFrm"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <TargetOS Value="win64"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <StripSymbols Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item2>
+      <Item3 Name="Release Win32">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="..\Bin\GD x32"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <OtherUnitFiles Value="..\Units;..\Units\SimpleTools;MainFrm;SizeFrm;SettingsFrm;AboutFrm"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <TargetCPU Value="i386"/>
+            <TargetOS Value="win32"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <StripSymbols Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item3>
+      <Item4 Name="Release Linux64">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="..\Bin\GD_x64"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <OtherUnitFiles Value="..\Units;..\Units\SimpleTools;MainFrm;SizeFrm;SettingsFrm;AboutFrm"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <TargetOS Value="linux"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <StripSymbols Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item4>
+      <Item5 Name="Release Linux32">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="..\Bin\GD_x32"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <OtherUnitFiles Value="..\Units;..\Units\SimpleTools;MainFrm;SizeFrm;SettingsFrm;AboutFrm"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <TargetOS Value="linux"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <StripSymbols Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item5>
+    </BuildModes>
+    <Units Count="49">
+      <Unit0>
+        <Filename Value="GD.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="10"/>
+        <UsageCount Value="152"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainFrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="276"/>
+        <CursorPos Y="286"/>
+        <UsageCount Value="152"/>
+        <Bookmarks Count="1">
+          <Item0 X="84" Y="685" ID="2"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="gdPattern.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="56" Y="97"/>
+        <UsageCount Value="152"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="gdFunctions.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="40" Y="93"/>
+        <UsageCount Value="139"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="SizeFrm\SizeUnit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SizeFrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="81"/>
+        <CursorPos X="23" Y="110"/>
+        <UsageCount Value="103"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="SettingsFrm\SettingsUnit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SettingsFrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="180"/>
+        <CursorPos Y="181"/>
+        <UsageCount Value="95"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="ExportTaskFrm\ExportTaskUnit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ExportTaskFrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="127"/>
+        <CursorPos X="14" Y="146"/>
+        <UsageCount Value="70"/>
+        <Bookmarks Count="1">
+          <Item0 Y="63" ID="3"/>
+        </Bookmarks>
+      </Unit6>
+      <Unit7>
+        <Filename Value="AboutFrm\AboutUnit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AboutFrm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="33" Y="13"/>
+        <UsageCount Value="21"/>
+        <Bookmarks Count="1">
+          <Item0 Y="48" ID="1"/>
+        </Bookmarks>
+      </Unit7>
+      <Unit8>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\objpas\types.pp"/>
+        <UnitName Value="Types"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="7"/>
+        <UsageCount Value="7"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\inc\typshrdh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="90"/>
+        <CursorPos X="18" Y="110"/>
+        <UsageCount Value="5"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\..\Творческий человек\SimpleGameEngine\Source\sgeTypes.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="66"/>
+        <CursorPos X="56" Y="185"/>
+        <UsageCount Value="3"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="..\SimpleTools\StringArray.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="482"/>
+        <CursorPos Y="502"/>
+        <UsageCount Value="9"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="D:\Work\Обмен\Functions.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="560"/>
+        <CursorPos Y="569"/>
+        <UsageCount Value="9"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="C:\lazarus\lcl\graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1195"/>
+        <CursorPos X="14" Y="1215"/>
+        <UsageCount Value="7"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\objpas\classes\classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1822"/>
+        <CursorPos X="21" Y="1840"/>
+        <UsageCount Value="4"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\packages\fcl-image\src\fpcanvas.pp"/>
+        <UnitName Value="FPCanvas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="138"/>
+        <CursorPos X="36" Y="158"/>
+        <UsageCount Value="10"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="..\Units\gdPattern.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="58"/>
+        <CursorPos X="18" Y="65"/>
+        <UsageCount Value="62"/>
+        <Loaded Value="True"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="..\Units\gdFunctions.pas"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="329"/>
+        <CursorPos X="44" Y="369"/>
+        <UsageCount Value="41"/>
+        <Loaded Value="True"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\inc\currh.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="14" Y="19"/>
+        <UsageCount Value="10"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="..\Units\SimpleTools\SimpleParameters.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1120"/>
+        <CursorPos Y="1152"/>
+        <UsageCount Value="5"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\objpas\math.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2291"/>
+        <CursorPos X="15" Y="2294"/>
+        <UsageCount Value="1"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\inc\typshrd.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="309"/>
+        <CursorPos X="16" Y="317"/>
+        <UsageCount Value="5"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="..\Units\SimpleTools\StringArray.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="418"/>
+        <CursorPos X="3" Y="435"/>
+        <UsageCount Value="3"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="..\..\Творческий человек\SimpleGameEngine\Source\SimpleTools\ComplexContainers.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="130"/>
+        <UsageCount Value="3"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="..\..\Творческий человек\SimpleGameEngine\Source\SimpleTools\SimpleCommand.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="112"/>
+        <UsageCount Value="3"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="..\..\Творческий человек\SimpleGameEngine\Source\SimpleTools\SimpleContainers.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="73"/>
+        <CursorPos Y="76"/>
+        <UsageCount Value="3"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="SettingsFrm\Pattern.rc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="10"/>
+        <UsageCount Value="3"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\objpas\classes\streams.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="914"/>
+        <CursorPos X="5" Y="928"/>
+        <UsageCount Value="3"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="C:\lazarus\lcl\lcltype.pp"/>
+        <UnitName Value="LCLType"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2176"/>
+        <CursorPos X="3" Y="2199"/>
+        <UsageCount Value="3"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\win\wininc\defines.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1198"/>
+        <CursorPos X="5" Y="1221"/>
+        <UsageCount Value="3"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\win\wininc\base.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="400"/>
+        <CursorPos X="5" Y="423"/>
+        <UsageCount Value="3"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\objpas\classes\compon.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="452"/>
+        <CursorPos X="34" Y="457"/>
+        <UsageCount Value="4"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="C:\lazarus\lcl\include\brush.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5"/>
+        <CursorPos Y="38"/>
+        <UsageCount Value="7"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="C:\lazarus\lcl\include\customform.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1459"/>
+        <CursorPos Y="1478"/>
+        <UsageCount Value="5"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3674"/>
+        <CursorPos X="3" Y="3682"/>
+        <UsageCount Value="8"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="C:\lazarus\lcl\include\wincontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5379"/>
+        <CursorPos X="28" Y="5396"/>
+        <UsageCount Value="5"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="C:\lazarus\lcl\lclmessageglue.pas"/>
+        <UnitName Value="LCLMessageGlue"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="90"/>
+        <CursorPos Y="122"/>
+        <UsageCount Value="5"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32callback.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2650"/>
+        <CursorPos Y="2671"/>
+        <UsageCount Value="5"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32wsforms.pp"/>
+        <UnitName Value="Win32WSForms"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="355"/>
+        <CursorPos X="15" Y="383"/>
+        <UsageCount Value="5"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\packages\fcl-image\src\fpwritejpeg.pas"/>
+        <UnitName Value="FPWriteJPEG"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="7"/>
+        <CursorPos X="3" Y="30"/>
+        <UsageCount Value="7"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="C:\lazarus\lcl\include\rasterimage.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="936"/>
+        <CursorPos Y="957"/>
+        <UsageCount Value="7"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="C:\lazarus\lcl\include\font.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="906"/>
+        <CursorPos Y="929"/>
+        <UsageCount Value="7"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\inc\objpash.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="180"/>
+        <CursorPos X="21" Y="203"/>
+        <UsageCount Value="7"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\inc\objpas.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="283"/>
+        <CursorPos X="29" Y="287"/>
+        <UsageCount Value="7"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\objpas\sysutils\sysutilh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="247"/>
+        <CursorPos X="3" Y="270"/>
+        <UsageCount Value="8"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\objpas\sysutils\sysutils.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="146"/>
+        <CursorPos X="9" Y="158"/>
+        <UsageCount Value="7"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\win64\system.pp"/>
+        <UnitName Value="System"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="18"/>
+        <CursorPos X="20" Y="41"/>
+        <UsageCount Value="8"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="C:\lazarus\lcl\controls.pp"/>
+        <UnitName Value="Controls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1557"/>
+        <CursorPos X="15" Y="1578"/>
+        <UsageCount Value="9"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="166"/>
+        <CursorPos X="30" Y="183"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit48>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="833" TopLine="818"/>
+      </Position1>
+      <Position2>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="73" Column="15" TopLine="49"/>
+      </Position2>
+      <Position3>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="837" Column="22" TopLine="817"/>
+      </Position3>
+      <Position4>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="54" Column="93" TopLine="32"/>
+      </Position4>
+      <Position5>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="634" Column="45" TopLine="613"/>
+      </Position5>
+      <Position6>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="353" Column="19" TopLine="346"/>
+      </Position6>
+      <Position7>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="63" Column="20" TopLine="40"/>
+      </Position7>
+      <Position8>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="662" Column="23" TopLine="553"/>
+      </Position8>
+      <Position9>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="140" Column="3" TopLine="126"/>
+      </Position9>
+      <Position10>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="9" Column="73"/>
+      </Position10>
+      <Position11>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="140" Column="32" TopLine="117"/>
+      </Position11>
+      <Position12>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="125" Column="14" TopLine="117"/>
+      </Position12>
+      <Position13>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="39" Column="19" TopLine="18"/>
+      </Position13>
+      <Position14>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="569" Column="8" TopLine="543"/>
+      </Position14>
+      <Position15>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="64" Column="15" TopLine="42"/>
+      </Position15>
+      <Position16>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="39" Column="20" TopLine="25"/>
+      </Position16>
+      <Position17>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="563" Column="10" TopLine="540"/>
+      </Position17>
+      <Position18>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="65" Column="20" TopLine="29"/>
+      </Position18>
+      <Position19>
+        <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
+        <Caret Line="180" Column="22" TopLine="163"/>
+      </Position19>
+      <Position20>
+        <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
+        <Caret Line="183" Column="30" TopLine="166"/>
+      </Position20>
+      <Position21>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="219" Column="6" TopLine="202"/>
+      </Position21>
+      <Position22>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="797" TopLine="780"/>
+      </Position22>
+      <Position23>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="195" Column="13" TopLine="187"/>
+      </Position23>
+      <Position24>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="62" Column="23" TopLine="46"/>
+      </Position24>
+      <Position25>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="635" Column="3" TopLine="632"/>
+      </Position25>
+      <Position26>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="63" Column="15" TopLine="40"/>
+      </Position26>
+      <Position27>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="650" Column="29" TopLine="645"/>
+      </Position27>
+      <Position28>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="221" Column="30" TopLine="208"/>
+      </Position28>
+      <Position29>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="202" Column="29" TopLine="200"/>
+      </Position29>
+      <Position30>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="286" Column="12" TopLine="284"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode="default"/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="C:\lazarus\fpc\3.0.4\source\rtl\inc\objpas.inc"/>
+        <Line Value="287"/>
+      </Item1>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>
