@@ -2,8 +2,8 @@
 <CONFIG>
   <ProjectSession>
     <PathDelim Value="\"/>
-    <Version Value="11"/>
-    <BuildModes Count="5" Active="Release Linux32">
+    <Version Value="10"/>
+    <BuildModes Count="5" Active="Release Linux64">
       <Item1 Name="Release">
         <CompilerOptions>
           <Version Value="11"/>
@@ -117,6 +117,7 @@
           </SearchPaths>
           <CodeGeneration>
             <SmartLinkUnit Value="True"/>
+            <TargetCPU Value="x86_64"/>
             <TargetOS Value="linux"/>
             <Optimizations>
               <OptimizationLevel Value="3"/>
@@ -150,6 +151,7 @@
           </SearchPaths>
           <CodeGeneration>
             <SmartLinkUnit Value="True"/>
+            <TargetCPU Value="i386"/>
             <TargetOS Value="linux"/>
             <Optimizations>
               <OptimizationLevel Value="3"/>
@@ -184,7 +186,6 @@
         <ComponentName Value="MainFrm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <TopLine Value="276"/>
         <CursorPos Y="286"/>
         <UsageCount Value="152"/>
@@ -215,8 +216,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="81"/>
-        <CursorPos X="23" Y="110"/>
+        <TopLine Value="93"/>
+        <CursorPos X="3" Y="114"/>
         <UsageCount Value="103"/>
       </Unit4>
       <Unit5>
@@ -225,10 +226,13 @@
         <ComponentName Value="SettingsFrm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="180"/>
-        <CursorPos Y="181"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="171"/>
+        <CursorPos X="37" Y="195"/>
         <UsageCount Value="95"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit5>
       <Unit6>
         <Filename Value="ExportTaskFrm\ExportTaskUnit.pas"/>
@@ -546,14 +550,12 @@
       </Unit47>
       <Unit48>
         <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="166"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="30" Y="183"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit48>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="28" HistoryIndex="27">
       <Position1>
         <Filename Value="MainFrm\MainUnit.pas"/>
         <Caret Line="833" TopLine="818"/>
@@ -627,58 +629,46 @@
         <Caret Line="65" Column="20" TopLine="29"/>
       </Position18>
       <Position19>
-        <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
-        <Caret Line="180" Column="22" TopLine="163"/>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="219" Column="6" TopLine="202"/>
       </Position19>
       <Position20>
-        <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
-        <Caret Line="183" Column="30" TopLine="166"/>
+        <Filename Value="MainFrm\MainUnit.pas"/>
+        <Caret Line="797" TopLine="780"/>
       </Position20>
       <Position21>
         <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="219" Column="6" TopLine="202"/>
+        <Caret Line="195" Column="13" TopLine="187"/>
       </Position21>
       <Position22>
         <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="797" TopLine="780"/>
+        <Caret Line="62" Column="23" TopLine="46"/>
       </Position22>
       <Position23>
         <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="195" Column="13" TopLine="187"/>
+        <Caret Line="635" Column="3" TopLine="632"/>
       </Position23>
       <Position24>
         <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="62" Column="23" TopLine="46"/>
+        <Caret Line="63" Column="15" TopLine="40"/>
       </Position24>
       <Position25>
         <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="635" Column="3" TopLine="632"/>
+        <Caret Line="650" Column="29" TopLine="645"/>
       </Position25>
       <Position26>
         <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="63" Column="15" TopLine="40"/>
+        <Caret Line="221" Column="30" TopLine="208"/>
       </Position26>
       <Position27>
         <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="650" Column="29" TopLine="645"/>
+        <Caret Line="202" Column="29" TopLine="200"/>
       </Position27>
       <Position28>
         <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="221" Column="30" TopLine="208"/>
-      </Position28>
-      <Position29>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="202" Column="29" TopLine="200"/>
-      </Position29>
-      <Position30>
-        <Filename Value="MainFrm\MainUnit.pas"/>
         <Caret Line="286" Column="12" TopLine="284"/>
-      </Position30>
+      </Position28>
     </JumpHistory>
-    <RunParams>
-      <FormatVersion Value="2"/>
-      <Modes Count="0" ActiveMode="default"/>
-    </RunParams>
   </ProjectSession>
   <Debugging>
     <BreakPoints Count="1">

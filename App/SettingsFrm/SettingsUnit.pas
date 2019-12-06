@@ -190,6 +190,10 @@ begin
 
   //Заголовок
   if SimpleParameters_Get(Lng, 'SettingsFrm.Caption', s) then Caption := s;
+
+  //Кнопки
+  if SimpleParameters_Get(Lng, 'SettingsFrm.BtnOk', s) then btnOk.Caption := s;
+  if SimpleParameters_Get(Lng, 'SettingsFrm.BtnCancel', s) then btnCancel.Caption := s;
 end;
 
 
