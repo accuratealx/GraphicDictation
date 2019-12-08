@@ -49,6 +49,7 @@ type
     procedure AddPoint(Point: TPoint);
     procedure AddPoint(StepX, StepY: Integer);
     function  PointToString(Point: TPoint; Up, Down, Left, Right: String): String;
+    function  GetPointForFile(Point: TPoint): String;
 
 
     function  GetLastPoint: TPoint;
@@ -306,19 +307,26 @@ begin
     if Point.Y > 0 then s := Down else s := Up;
     Result := Result + IntToStr(Abs(Point.Y)) + s;
     end;
+end;
 
 
-  {//X
-  if Point.X <> 0 then
+function TgdPattern.GetPointForFile(Point: TPoint): String;
+var
+  sx, sy: String;
+begin
+  //X
+  sx := '';
+  if Point.x <> 0 then
     if Point.X > 0 then sx := IntToStr(Point.X) + ' Right' else sx := IntToStr(Abs(Point.X)) + ' Left';
 
   //Y
+  sy := '';
   if Point.Y <> 0 then
     if Point.Y > 0 then sy := IntToStr(Point.Y) + ' Down' else sy := IntToStr(Abs(Point.Y)) + ' Up';
 
   Result := sx;
   if (sx <> '') and (sy <> '') then Result := Result + ', ';
-  Result := Result + sy;}
+  Result := Result + sy;
 end;
 
 
@@ -491,6 +499,7 @@ begin
 
 
   //Разбор Action
+  PtArr := nil;
   c := StringArray_GetCount(@Action) - 1;
   for i := 0 to c do
     begin
@@ -547,7 +556,7 @@ begin
   StringArray_Add(@Action, '');
   c := GetPointCount - 1;
   for i := 0 to c do
-    StringArray_Add(@Action, PointToString(FPoints[i], 'Up', 'Down', 'Left', 'Right'));
+    StringArray_Add(@Action, GetPointForFile(FPoints[i]));
   StringArray_Add(@Action, '');
 
   //Save

@@ -805,11 +805,8 @@ var
   R, G, B: Integer;
   sa: TStringArray;
 begin
-  if not SimpleParameters_Get(@FSettings, sName, s) then
-    begin
-    Result := DefValue;
-    Exit;
-    end;
+  Result := DefValue;
+  if not SimpleParameters_Get(@FSettings, sName, s) then   Exit;
 
   //Разобрать строку
   R := 0;

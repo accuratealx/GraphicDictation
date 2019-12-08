@@ -2,41 +2,9 @@
 <CONFIG>
   <ProjectSession>
     <PathDelim Value="\"/>
-    <Version Value="10"/>
-    <BuildModes Count="5" Active="Release Linux64">
-      <Item1 Name="Release">
-        <CompilerOptions>
-          <Version Value="11"/>
-          <PathDelim Value="\"/>
-          <Target>
-            <Filename Value="..\Bin\GD-$(TargetCPU)"/>
-          </Target>
-          <SearchPaths>
-            <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="..\Units;..\Units\SimpleTools;MainFrm;SizeFrm;SettingsFrm;AboutFrm"/>
-            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
-          </SearchPaths>
-          <CodeGeneration>
-            <SmartLinkUnit Value="True"/>
-            <Optimizations>
-              <OptimizationLevel Value="3"/>
-            </Optimizations>
-          </CodeGeneration>
-          <Linking>
-            <Debugging>
-              <GenerateDebugInfo Value="False"/>
-              <StripSymbols Value="True"/>
-            </Debugging>
-            <LinkSmart Value="True"/>
-            <Options>
-              <Win32>
-                <GraphicApplication Value="True"/>
-              </Win32>
-            </Options>
-          </Linking>
-        </CompilerOptions>
-      </Item1>
-      <Item2 Name="Release Win64">
+    <Version Value="11"/>
+    <BuildModes Count="4" Active="Release Win64">
+      <Item1 Name="Release Win64">
         <CompilerOptions>
           <Version Value="11"/>
           <PathDelim Value="\"/>
@@ -68,8 +36,8 @@
             </Options>
           </Linking>
         </CompilerOptions>
-      </Item2>
-      <Item3 Name="Release Win32">
+      </Item1>
+      <Item2 Name="Release Win32">
         <CompilerOptions>
           <Version Value="11"/>
           <PathDelim Value="\"/>
@@ -102,8 +70,8 @@
             </Options>
           </Linking>
         </CompilerOptions>
-      </Item3>
-      <Item4 Name="Release Linux64">
+      </Item2>
+      <Item3 Name="Release Linux64">
         <CompilerOptions>
           <Version Value="11"/>
           <PathDelim Value="\"/>
@@ -136,8 +104,8 @@
             </Options>
           </Linking>
         </CompilerOptions>
-      </Item4>
-      <Item5 Name="Release Linux32">
+      </Item3>
+      <Item4 Name="Release Linux32">
         <CompilerOptions>
           <Version Value="11"/>
           <PathDelim Value="\"/>
@@ -170,7 +138,7 @@
             </Options>
           </Linking>
         </CompilerOptions>
-      </Item5>
+      </Item4>
     </BuildModes>
     <Units Count="49">
       <Unit0>
@@ -178,7 +146,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="10"/>
-        <UsageCount Value="152"/>
+        <UsageCount Value="153"/>
       </Unit0>
       <Unit1>
         <Filename Value="MainFrm\MainUnit.pas"/>
@@ -186,9 +154,9 @@
         <ComponentName Value="MainFrm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="276"/>
-        <CursorPos Y="286"/>
-        <UsageCount Value="152"/>
+        <TopLine Value="787"/>
+        <CursorPos Y="810"/>
+        <UsageCount Value="153"/>
         <Bookmarks Count="1">
           <Item0 X="84" Y="685" ID="2"/>
         </Bookmarks>
@@ -200,14 +168,14 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="56" Y="97"/>
-        <UsageCount Value="152"/>
+        <UsageCount Value="153"/>
       </Unit2>
       <Unit3>
         <Filename Value="gdFunctions.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="40" Y="93"/>
-        <UsageCount Value="139"/>
+        <UsageCount Value="140"/>
       </Unit3>
       <Unit4>
         <Filename Value="SizeFrm\SizeUnit.pas"/>
@@ -218,7 +186,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="93"/>
         <CursorPos X="3" Y="114"/>
-        <UsageCount Value="103"/>
+        <UsageCount Value="104"/>
       </Unit4>
       <Unit5>
         <Filename Value="SettingsFrm\SettingsUnit.pas"/>
@@ -226,13 +194,10 @@
         <ComponentName Value="SettingsFrm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="171"/>
-        <CursorPos X="37" Y="195"/>
-        <UsageCount Value="95"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="138"/>
+        <CursorPos X="63" Y="180"/>
+        <UsageCount Value="96"/>
       </Unit5>
       <Unit6>
         <Filename Value="ExportTaskFrm\ExportTaskUnit.pas"/>
@@ -243,7 +208,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="127"/>
         <CursorPos X="14" Y="146"/>
-        <UsageCount Value="70"/>
+        <UsageCount Value="71"/>
         <Bookmarks Count="1">
           <Item0 Y="63" ID="3"/>
         </Bookmarks>
@@ -256,7 +221,7 @@
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="33" Y="13"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="22"/>
         <Bookmarks Count="1">
           <Item0 Y="48" ID="1"/>
         </Bookmarks>
@@ -321,17 +286,17 @@
       </Unit15>
       <Unit16>
         <Filename Value="..\Units\gdPattern.pas"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="58"/>
-        <CursorPos X="18" Y="65"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="308"/>
+        <CursorPos X="22" Y="328"/>
         <UsageCount Value="62"/>
         <Loaded Value="True"/>
       </Unit16>
       <Unit17>
         <Filename Value="..\Units\gdFunctions.pas"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="329"/>
-        <CursorPos X="44" Y="369"/>
+        <TopLine Value="291"/>
+        <CursorPos X="132" Y="311"/>
         <UsageCount Value="41"/>
         <Loaded Value="True"/>
       </Unit17>
@@ -550,125 +515,140 @@
       </Unit47>
       <Unit48>
         <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="30" Y="183"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="134"/>
+        <CursorPos X="3" Y="148"/>
         <UsageCount Value="10"/>
+        <Loaded Value="True"/>
       </Unit48>
     </Units>
-    <JumpHistory Count="28" HistoryIndex="27">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="833" TopLine="818"/>
+        <Filename Value="..\Units\gdPattern.pas"/>
+        <Caret Line="51" Column="75" TopLine="32"/>
       </Position1>
       <Position2>
         <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="73" Column="15" TopLine="49"/>
+        <Caret Line="589" Column="17" TopLine="567"/>
       </Position2>
       <Position3>
         <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="837" Column="22" TopLine="817"/>
+        <Caret Line="295" Column="15" TopLine="281"/>
       </Position3>
       <Position4>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="54" Column="93" TopLine="32"/>
+        <Filename Value="..\Units\gdFunctions.pas"/>
+        <Caret Line="97" Column="11" TopLine="77"/>
       </Position4>
       <Position5>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="634" Column="45" TopLine="613"/>
+        <Filename Value="..\Units\gdFunctions.pas"/>
+        <Caret Line="311" Column="136" TopLine="288"/>
       </Position5>
       <Position6>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="353" Column="19" TopLine="346"/>
+        <Filename Value="..\Units\gdPattern.pas"/>
+        <Caret Line="527" Column="28" TopLine="488"/>
       </Position6>
       <Position7>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="63" Column="20" TopLine="40"/>
+        <Filename Value="..\Units\gdPattern.pas"/>
+        <Caret Line="590" Column="27" TopLine="570"/>
       </Position7>
       <Position8>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="662" Column="23" TopLine="553"/>
+        <Filename Value="..\Units\gdPattern.pas"/>
+        <Caret Line="51" Column="15" TopLine="46"/>
       </Position8>
       <Position9>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="140" Column="3" TopLine="126"/>
+        <Filename Value="..\Units\gdPattern.pas"/>
+        <Caret Line="307" Column="49" TopLine="289"/>
       </Position9>
       <Position10>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="9" Column="73"/>
+        <Filename Value="..\Units\gdPattern.pas"/>
+        <Caret Line="51" Column="67" TopLine="32"/>
       </Position10>
       <Position11>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="140" Column="32" TopLine="117"/>
+        <Filename Value="..\Units\gdPattern.pas"/>
+        <Caret Line="308" TopLine="290"/>
       </Position11>
       <Position12>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="125" Column="14" TopLine="117"/>
+        <Filename Value="..\Units\gdPattern.pas"/>
+        <Caret Line="52" Column="54" TopLine="32"/>
       </Position12>
       <Position13>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="39" Column="19" TopLine="18"/>
+        <Filename Value="..\Units\gdPattern.pas"/>
+        <Caret Line="327" Column="25" TopLine="296"/>
       </Position13>
       <Position14>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="569" Column="8" TopLine="543"/>
+        <Filename Value="..\Units\gdPattern.pas"/>
+        <Caret Line="313" Column="27" TopLine="296"/>
       </Position14>
       <Position15>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="64" Column="15" TopLine="42"/>
+        <Filename Value="..\Units\gdPattern.pas"/>
+        <Caret Line="63" Column="15" TopLine="33"/>
       </Position15>
       <Position16>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="39" Column="20" TopLine="25"/>
+        <Filename Value="..\Units\gdPattern.pas"/>
+        <Caret Line="556" Column="59" TopLine="532"/>
       </Position16>
       <Position17>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="563" Column="10" TopLine="540"/>
+        <Filename Value="..\Units\gdPattern.pas"/>
+        <Caret Line="507" Column="21" TopLine="568"/>
       </Position17>
       <Position18>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="65" Column="20" TopLine="29"/>
+        <Filename Value="..\Units\gdPattern.pas"/>
+        <Caret Line="62" Column="15" TopLine="43"/>
       </Position18>
       <Position19>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="219" Column="6" TopLine="202"/>
+        <Filename Value="..\Units\gdPattern.pas"/>
+        <Caret Line="502" Column="4" TopLine="494"/>
       </Position19>
       <Position20>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="797" TopLine="780"/>
+        <Filename Value="..\Units\gdPattern.pas"/>
+        <Caret Line="323" Column="12" TopLine="306"/>
       </Position20>
       <Position21>
         <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="195" Column="13" TopLine="187"/>
+        <Caret Line="807" TopLine="790"/>
       </Position21>
       <Position22>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="62" Column="23" TopLine="46"/>
+        <Filename Value="..\Units\gdPattern.pas"/>
+        <Caret Line="328" Column="22" TopLine="308"/>
       </Position22>
       <Position23>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="635" Column="3" TopLine="632"/>
+        <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
+        <Caret Line="183" Column="20" TopLine="133"/>
       </Position23>
       <Position24>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="63" Column="15" TopLine="40"/>
+        <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
+        <Caret Line="180" Column="22" TopLine="160"/>
       </Position24>
       <Position25>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="650" Column="29" TopLine="645"/>
+        <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
+        <Caret Line="183" Column="30" TopLine="163"/>
       </Position25>
       <Position26>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="221" Column="30" TopLine="208"/>
+        <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
+        <Caret Line="180" Column="22" TopLine="160"/>
       </Position26>
       <Position27>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="202" Column="29" TopLine="200"/>
+        <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
+        <Caret Line="181" Column="13" TopLine="160"/>
       </Position27>
       <Position28>
-        <Filename Value="MainFrm\MainUnit.pas"/>
-        <Caret Line="286" Column="12" TopLine="284"/>
+        <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
+        <Caret Line="184" Column="30" TopLine="164"/>
       </Position28>
+      <Position29>
+        <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
+        <Caret Line="181" Column="22" TopLine="161"/>
+      </Position29>
+      <Position30>
+        <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
+        <Caret Line="149" Column="15" TopLine="134"/>
+      </Position30>
     </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode="default"/>
+    </RunParams>
   </ProjectSession>
   <Debugging>
     <BreakPoints Count="1">
