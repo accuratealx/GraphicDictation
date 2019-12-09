@@ -3,7 +3,7 @@
   <ProjectSession>
     <PathDelim Value="\"/>
     <Version Value="11"/>
-    <BuildModes Count="4" Active="Release Win64">
+    <BuildModes Count="4" Active="Debug">
       <Item1 Name="Release Win64">
         <CompilerOptions>
           <Version Value="11"/>
@@ -523,7 +523,7 @@
         <Loaded Value="True"/>
       </Unit48>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
         <Filename Value="..\Units\gdPattern.pas"/>
         <Caret Line="51" Column="75" TopLine="32"/>
@@ -590,60 +590,56 @@
       </Position16>
       <Position17>
         <Filename Value="..\Units\gdPattern.pas"/>
-        <Caret Line="507" Column="21" TopLine="568"/>
+        <Caret Line="62" Column="15" TopLine="43"/>
       </Position17>
       <Position18>
         <Filename Value="..\Units\gdPattern.pas"/>
-        <Caret Line="62" Column="15" TopLine="43"/>
+        <Caret Line="502" Column="4" TopLine="494"/>
       </Position18>
       <Position19>
         <Filename Value="..\Units\gdPattern.pas"/>
-        <Caret Line="502" Column="4" TopLine="494"/>
+        <Caret Line="323" Column="12" TopLine="306"/>
       </Position19>
       <Position20>
-        <Filename Value="..\Units\gdPattern.pas"/>
-        <Caret Line="323" Column="12" TopLine="306"/>
-      </Position20>
-      <Position21>
         <Filename Value="MainFrm\MainUnit.pas"/>
         <Caret Line="807" TopLine="790"/>
-      </Position21>
-      <Position22>
+      </Position20>
+      <Position21>
         <Filename Value="..\Units\gdPattern.pas"/>
         <Caret Line="328" Column="22" TopLine="308"/>
+      </Position21>
+      <Position22>
+        <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
+        <Caret Line="183" Column="20" TopLine="133"/>
       </Position22>
       <Position23>
         <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
-        <Caret Line="183" Column="20" TopLine="133"/>
+        <Caret Line="180" Column="22" TopLine="160"/>
       </Position23>
       <Position24>
         <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
-        <Caret Line="180" Column="22" TopLine="160"/>
+        <Caret Line="183" Column="30" TopLine="163"/>
       </Position24>
       <Position25>
         <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
-        <Caret Line="183" Column="30" TopLine="163"/>
+        <Caret Line="180" Column="22" TopLine="160"/>
       </Position25>
       <Position26>
         <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
-        <Caret Line="180" Column="22" TopLine="160"/>
+        <Caret Line="181" Column="13" TopLine="160"/>
       </Position26>
       <Position27>
         <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
-        <Caret Line="181" Column="13" TopLine="160"/>
+        <Caret Line="184" Column="30" TopLine="164"/>
       </Position27>
       <Position28>
         <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
-        <Caret Line="184" Column="30" TopLine="164"/>
+        <Caret Line="181" Column="22" TopLine="161"/>
       </Position28>
       <Position29>
         <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
-        <Caret Line="181" Column="22" TopLine="161"/>
-      </Position29>
-      <Position30>
-        <Filename Value="..\Units\SimpleTools\SimpleContainers.pas"/>
         <Caret Line="149" Column="15" TopLine="134"/>
-      </Position30>
+      </Position29>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
