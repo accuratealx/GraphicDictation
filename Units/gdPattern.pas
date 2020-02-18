@@ -51,6 +51,7 @@ type
     function  PointToString(Point: TPoint; Up, Down, Left, Right: String): String;
     function  GetPointForFile(Point: TPoint): String;
 
+    function  GetMaxLengthPointString: String;
 
     function  GetLastPoint: TPoint;
     function  GetPointByIdx(Index: Integer): TPoint;
@@ -327,6 +328,21 @@ begin
   Result := sx;
   if (sx <> '') and (sy <> '') then Result := Result + ', ';
   Result := Result + sy;
+end;
+
+
+function TgdPattern.GetMaxLengthPointString: String;
+var
+  i, c: Integer;
+  s: String;
+begin
+  Result := '';
+  c := GetPointCount - 1;
+  for i := 0 to c do
+    begin
+    s := PointToString(FPoints[i], UPArrow, DOWNArrow, LEFTArrow, RIGHTArrow);
+    if Length(s) > Length(Result) then Result := s;
+    end;
 end;
 
 

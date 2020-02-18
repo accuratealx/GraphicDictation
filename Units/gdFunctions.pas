@@ -68,6 +68,10 @@ type
     ActionFontColor: TColor;
     ActionFontSize: Integer;
     ActionFontStyle: TFontStyles;
+
+    //Видимые части
+    VisiblePattern: Boolean;
+    VisibleTask: Boolean;
   end;
 
 
@@ -104,6 +108,7 @@ procedure DrawDots(Bmp: TBitmap; Pattern: TgdPattern; Color: TColor; Radius: Int
 procedure DrawStartPoint(Bmp: TBitmap; Pattern: TgdPattern; Color: TColor; Radius: Integer = 5);
 procedure DrawSelectPoint(Bmp: TBitmap; Pattern: TgdPattern; Point: TPoint; Color: TColor; Radius: Integer = 5; LineWidth: Integer = 3);
 procedure DrawNextLine(Bmp: TBitmap; Pattern: TgdPattern; LastPoint: TPoint; LineColor, DotColor: TColor; LineWidth: Integer = 5; Radius: Integer = 5);
+
 
 implementation
 
@@ -153,7 +158,7 @@ begin
     BGColor := clWhite;
 
     //Узор
-    PatternHeight := 120;
+    PatternHeight := 150;
 
     //Заголовок
     CaptionFontName := 'Times new roman';
@@ -181,6 +186,10 @@ begin
     ActionFontColor := clBlack;
     ActionFontSize := 36;
     ActionFontStyle := [];
+
+    //Видимые части
+    VisiblePattern := True;
+    VisibleTask := True;
     end;
 end;
 
@@ -256,7 +265,8 @@ begin
   bmPattern.Canvas.Brush.Style := bsSolid;
   bmPattern.Canvas.FillRect(0, 0, bmPattern.Width, bmPattern.Height);
   DrawGreed(bmPattern, Pattern, VisSettings.GreedColor, VisSettings.GreedWidth);
-  DrawPattern(bmPattern, Pattern, VisSettings.LineColor, VisSettings.LineWidth);
+  if ExportSettings.VisiblePattern then
+    DrawPattern(bmPattern, Pattern, VisSettings.LineColor, VisSettings.LineWidth);                //Линии узора
   DrawStartPoint(bmPattern, Pattern, VisSettings.StartPointColor, VisSettings.StartPointRadius);
   ptrnX := rPageIndent.Left + ptrnWidth div 2 - bmPattern.Width div 2;
   ptrnY := rPageIndent.Top + cptHeight + cptTopIndent + cptBottomIndent + (ptrnHeight div 2) - bmPattern.Height div 2;
@@ -295,7 +305,7 @@ begin
     pt := Pattern.GetMaxPoint;
     Str := Pattern.PointToString(pt, UPArrow, DOWNArrow, LEFTArrow, RIGHTArrow);
     grdIndent := Round(GreedIndent * Delta);
-    cellWidth := TextWidth(Str) + grdIndent * 2;
+    cellWidth := TextWidth(Pattern.GetMaxLengthPointString) + grdIndent *  2;
     cellHeight := TextHeight(Str) + grdIndent * 2;
     cellPerWidth := ptrnWidth div cellWidth;
     grdWidth := ptrnWidth - cellPerWidth * cellWidth;
@@ -308,7 +318,8 @@ begin
     for i := 0 to c do
       begin
       Rectangle(X, Y, X + cellWidth, Y + cellHeight);
-      TextOut(X + grdIndent, Y + grdIndent, Pattern.PointToString(Pattern.RawPoint[i], UPArrow, DOWNArrow, LEFTArrow, RIGHTArrow));
+      if ExportSettings.VisibleTask then
+        TextOut(X + grdIndent, Y + grdIndent, Pattern.PointToString(Pattern.RawPoint[i], UPArrow, DOWNArrow, LEFTArrow, RIGHTArrow)); //Текст
       Inc(X, cellWidth);
       Inc(j);
       if j >= cellPerWidth then

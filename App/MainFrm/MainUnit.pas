@@ -9,14 +9,23 @@ uses
   ComCtrls, ExtCtrls, ExtDlgs, Types, SizeUnit, SettingsUnit, AboutUnit,
   StringArray, SimpleParameters, gdPattern, gdFunctions;
 
+
+const
+  VERSION = 'v0.5';
+
+
 type
   TMainFrm = class(TForm)
     MainMenu: TMainMenu;
     mClear: TMenuItem;
     mAbout: TMenuItem;
+    mEditMode: TMenuItem;
+    mTask3: TMenuItem;
+    mTask2: TMenuItem;
+    mTask1: TMenuItem;
+    mSeparator4: TMenuItem;
     mSeparator2: TMenuItem;
-    mTask: TMenuItem;
-    mExport: TMenuItem;
+    mExportTask: TMenuItem;
     mSettings: TMenuItem;
     mTools: TMenuItem;
     mFitSize: TMenuItem;
@@ -42,19 +51,23 @@ type
     procedure mAboutClick(Sender: TObject);
     procedure mClearClick(Sender: TObject);
     procedure mCloseClick(Sender: TObject);
+    procedure mEditModeClick(Sender: TObject);
     procedure mFitSizeClick(Sender: TObject);
     procedure mOpenClick(Sender: TObject);
     procedure mSaveAsClick(Sender: TObject);
     procedure mSaveClick(Sender: TObject);
     procedure mSettingsClick(Sender: TObject);
     procedure mSizeClick(Sender: TObject);
-    procedure mTaskClick(Sender: TObject);
+    procedure mTask1Click(Sender: TObject);
+    procedure mTask2Click(Sender: TObject);
+    procedure mTask3Click(Sender: TObject);
     procedure PaintBoxMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
     procedure PaintBoxMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
     procedure PaintBoxMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
     procedure PaintBoxPaint(Sender: TObject);
 
 
+    procedure SaveTask(Pattern: Boolean = True; Task: Boolean = True);
     function  GetWorkArea(Bmp: TBitmap; Pattern: TgdPattern): TRect;
     function  GetCellCoordinate(Bmp: TBitmap; Pattern: TgdPattern; X, Y: Integer): TPoint;
     procedure CorrectInterface;
@@ -84,6 +97,7 @@ type
     FLngDialogCaption: String;
     FLngDialogInfo: String;
     FLngNewDocName: String;
+    FLngSaveFileError: String;
     FLngStartWord: String;
     FLngActionWord: String;
 
@@ -155,6 +169,12 @@ end;
 procedure TMainFrm.mCloseClick(Sender: TObject);
 begin
   Close;
+end;
+
+
+procedure TMainFrm.mEditModeClick(Sender: TObject);
+begin
+  EditMode := not EditMode;
 end;
 
 
@@ -275,53 +295,21 @@ begin
 end;
 
 
-procedure TMainFrm.mTaskClick(Sender: TObject);
-var
-  ExportSettings: TExportTaskConfig;
-  VisualSettings: TgdVisualSettings;
-  Bmp: TBitmap;
-  jp: TJPEGImage;
-  fn: String;
+procedure TMainFrm.mTask1Click(Sender: TObject);
 begin
-  SavePictureDialog.FileName := FPattern.Name;
+  SaveTask(True, True);
+end;
 
-  if SavePictureDialog.Execute then
-    begin
-    ExportSettings := GetDefaultExportTaskSettings;
-    VisualSettings := FVisCfg;
-    VisualSettings.LineWidth := VisualSettings.LineWidth * 2;
-    VisualSettings.StartPointRadius := VisualSettings.StartPointRadius * 2;
 
-    Bmp := TBitmap.Create;
-    PrepareExportBmp(Bmp, ExportSettings, VisualSettings, FPattern, FLngStartWord, FLngActionWord);
+procedure TMainFrm.mTask2Click(Sender: TObject);
+begin
+  SaveTask(True, False);
+end;
 
-    jp := TJPEGImage.Create;
-    jp.CompressionQuality := 100;
-    jp.Width := Bmp.Width;
-    jp.Height := Bmp.Height;
 
-    try
-      try
-        case SavePictureDialog.FilterIndex of
-          1:  begin
-              fn := ChangeFileExt(SavePictureDialog.FileName, '.jpg');
-              jp.Canvas.Draw(0, 0, Bmp);
-              jp.SaveToFile(fn);
-              end;
-          2:  begin
-              fn := ChangeFileExt(SavePictureDialog.FileName, '.bmp');
-              Bmp.SaveToFile(fn);
-              end;
-        end;
-      except
-        raise Exception.Create('Unable save file "' + SavePictureDialog.FileName + '"');
-      end;
-
-    finally
-      jp.Free;
-      Bmp.Free;
-    end;
-    end;
+procedure TMainFrm.mTask3Click(Sender: TObject);
+begin
+  SaveTask(False, True);
 end;
 
 
@@ -334,12 +322,7 @@ begin
   FLastPoint := GetCellCoordinate(FBmp, FPattern, X, Y);
 
   //Переключить режим редактирования
-  if Button = mbMiddle then
-    begin
-    EditMode := not EditMode;
-    PaintBox.Cursor := crArrow;
-    PaintCanvas;
-    end;
+  if Button = mbMiddle then EditMode := not EditMode;
 
   //Выход если не режим редактора
   if not FEditMode then Exit;
@@ -496,6 +479,59 @@ begin
 end;
 
 
+procedure TMainFrm.SaveTask(Pattern: Boolean; Task: Boolean);
+var
+  ExportSettings: TExportTaskConfig;
+  VisualSettings: TgdVisualSettings;
+  Bmp: TBitmap;
+  jp: TJPEGImage;
+  fn: String;
+begin
+  SavePictureDialog.FileName := FPattern.Name;
+
+  if SavePictureDialog.Execute then
+    begin
+    ExportSettings := GetDefaultExportTaskSettings;
+    ExportSettings.VisiblePattern := Pattern;
+    ExportSettings.VisibleTask := Task;
+
+    VisualSettings := FVisCfg;
+    VisualSettings.LineWidth := VisualSettings.LineWidth * 2;
+    VisualSettings.StartPointRadius := VisualSettings.StartPointRadius * 3;
+
+    Bmp := TBitmap.Create;
+    PrepareExportBmp(Bmp, ExportSettings, VisualSettings, FPattern, FLngStartWord, FLngActionWord);
+
+    jp := TJPEGImage.Create;
+    jp.CompressionQuality := 100;
+    jp.Width := Bmp.Width;
+    jp.Height := Bmp.Height;
+
+    try
+      try
+        case SavePictureDialog.FilterIndex of
+          1:  begin
+              fn := ChangeFileExt(SavePictureDialog.FileName, '.jpg');
+              jp.Canvas.Draw(0, 0, Bmp);
+              jp.SaveToFile(fn);
+              end;
+          2:  begin
+              fn := ChangeFileExt(SavePictureDialog.FileName, '.bmp');
+              Bmp.SaveToFile(fn);
+              end;
+        end;
+      except
+        raise Exception.Create(FLngSaveFileError + ' "' + SavePictureDialog.FileName + '"');
+      end;
+
+    finally
+      jp.Free;
+      Bmp.Free;
+    end;
+    end;
+end;
+
+
 function TMainFrm.GetWorkArea(Bmp: TBitmap; Pattern: TgdPattern): TRect;
 var
   CellSize: TgdFloatPoint;
@@ -531,7 +567,7 @@ end;
 
 procedure TMainFrm.CorrectInterface;
 begin
-  Caption := FPattern.Name + ' - ' + FLngCaption;
+  Caption := FPattern.Name + ' - ' + FLngCaption + ' ' + VERSION;
 
   mSave.Enabled := FModified;
 
@@ -582,6 +618,7 @@ begin
   FLngCaption := 'Graphic Dictation';
   FLngDialogCaption := 'What to do...';
   FLngDialogInfo := 'Save changes to the pattern';
+  FLngSaveFileError := 'Save file error';
   FLngNewDocName := 'New';
   FLngStartWord := 'Start:';
   FLngActionWord := 'Actions:';
@@ -661,6 +698,9 @@ begin
 
   //Имя нового документа
   if SimpleParameters_Get(@FLanguage, 'MainFrm.NewPatternName', s) then FLngNewDocName := s;
+
+  //Не могу сохранить файл
+  if SimpleParameters_Get(@FLanguage, 'MainFrm.SaveFileError', s) then FLngSaveFileError := s;
 
   //Панель
   if SimpleParameters_Get(@FLanguage, 'MainFrm.Panel.Size', s) then StatusBar.Panels[0].Text := s;
@@ -835,6 +875,10 @@ end;
 procedure TMainFrm.SetEditorMode(AMode: Boolean);
 begin
   FEditMode := AMode;
+
+  mEditMode.Checked := FEditMode;
+  PaintBox.Cursor := crArrow;
+  PaintCanvas;
 end;
 
 
