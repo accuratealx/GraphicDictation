@@ -1,0 +1,63 @@
+#Файл языка Графического Диктанта 10.02.2020
+
+#Главное окно
+MainFrm.Caption = Графический Диктант
+MainFrm.Panel.Size = Размеры:
+MainFrm.Panel.Action = Действий:
+MainFrm.Panel.Coordinate = Координаты:
+MainFrm.NewPatternName = Новый
+MainFrm.SaveFileError = Невозможно сохранить файл
+MainFrm.Dialog.Filter = Файлы "Графического диктанта"
+MainFrm.OpenDialog.Title = Открыть узор
+MainFrm.SaveDialog.Title = Сохранить узор
+MainFrm.ExportDialog.Title = Сохранить задание
+MainFrm.Question.Caption = Что делать...
+MainFrm.Question.Info = Сохранить изменения в узоре
+MainMenu.mFile = Файл
+MainMenu.mOpen = Открыть
+MainMenu.mSave = Сохранить
+MainMenu.mSaveAs = Сохранить как
+MainMenu.mClose = Закрыть
+MainMenu.mImage = Узор
+MainMenu.mEditMode = Редактировать
+MainMenu.mSize = Изменить размер
+MainMenu.mFitSize = Подогнать размер
+MainMenu.mClear = Очистить
+MainMenu.mExportTask = Задание
+MainMenu.mTask1 = Узор, действия
+MainMenu.mTask2 = Узор
+MainMenu.mTask3 = Действия
+MainMenu.mTools = Инструменты
+MainMenu.mSettings = Настройки
+MainMenu.mHelp = Помощь
+MainMenu.mAbout = О программе
+
+#Настройка размеров
+SizeFrm.Caption = Размеры узора
+SizeFrm.BtnOk = Хорошо
+SizeFrm.BtnCancel = Отмена
+
+#Настройка программы
+SettingsFrm.Caption = Настройки
+SettingsFrm.BtnOk = Хорошо
+SettingsFrm.BtnCancel = Отмена
+SettingsFrm.lblPatternBGColor = Цвет фона
+SettingsFrm.lblGreedColor = Цвет линии сетки
+SettingsFrm.lblGreedWidth = Толщина линии сетки
+SettingsFrm.lblStartPointColor = Цвет начальной точки
+SettingsFrm.lblStartPointRadius = Радиус начальной точки
+SettingsFrm.lblLineColor = Цвет линии
+SettingsFrm.lblLineWidth = Толщина линии
+SettingsFrm.lblEditorDotColor = Цвет точки узла
+SettingsFrm.lblEditorDotRadius = Радиус точки изла
+SettingsFrm.lblNewLineColor = Цвет новой линии
+SettingsFrm.lblNewLineDotColor = Толщина новой линии
+SettingsFrm.lblNewLineWidth = Цвет точки новой линии
+SettingsFrm.lblNewLineDotRadius = Радиус точки новой линии
+
+#О программе
+AboutFrm.Caption = О программе
+
+#Экспорт задания
+ExportTask.StartWord = Начало:
+ExportTask.ActionWord = Действий:
